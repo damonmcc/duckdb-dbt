@@ -23,3 +23,11 @@ pip list
 
 > [!TIP]
 > Use `pip freeze | xargs pip uninstall -y` to uninstall all python packages.
+
+## Stage 0: Sanity Check
+
+Run a python script to confirm everything is setup:
+
+```bash
+python3 -m stage_0.sanity_check
+```
