@@ -1,0 +1,11 @@
+# python
+__pycache__/
+
+# pyenv
+.python-version
+
+# duckdb
+*.db
+
+# data
+data/**/
