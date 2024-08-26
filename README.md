@@ -82,7 +82,7 @@ Each row is a market and farm pair
 
 Each row is a farmers market
 
-- `name`
+- `market_name`
 - `accepts_ebt`
 - `distributes_health_bucks`
 - `open_year_round`
@@ -98,7 +98,7 @@ Each row is a farmers market
 Each row is a potential farm
 
 - `type`
-- `name`
+- `farm_name`
 - `area_sqft`
 - `whole_lot`
 - `address`
@@ -145,4 +145,17 @@ Source data:
 
 Use dbt to build a data pipeline
 
-...
+1. Install dbt packages and confirm setup:
+
+   ```bash
+   dbt deps
+   dbt debug
+   ```
+
+2. Test source data files:
+
+   ```bash
+   dbt test --select "source:*"
+   ```
+
+3. ...

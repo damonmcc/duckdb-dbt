@@ -4,8 +4,15 @@ __pycache__/
 # pyenv
 .python-version
 
+# data
+data/**/
+
 # duckdb
 *.db
 
-# data
-data/**/
+# dbt files 
+**/.user.yml
+dbt_packages/
+package-lock.yml
+*.log
+target/
