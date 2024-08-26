@@ -1,7 +1,8 @@
+dbt-core
+dbt-duckdb
 duckdb
 duckdb-engine
 ipykernel
-leafmap
 lonboard
 pandas
 pygwalker
