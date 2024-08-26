@@ -152,10 +152,14 @@ Use dbt to build a data pipeline
    dbt debug
    ```
 
-2. Test source data files:
+2. Test source data:
 
    ```bash
    dbt test --select "source:*"
    ```
 
-3. ...
+3. Build the dataset:
+
+   ```bash
+   dbt build
+   ```
