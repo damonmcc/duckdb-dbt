@@ -2,7 +2,7 @@
 
 This repo is an example of using [duckdb](https://duckdb.org/) and [dbt](https://docs.getdbt.com/) to build data.
 
-The code is organzed into three stages to show a progression of using these two tools from simple queries to a modern data pipeline.
+The code is organzed into three stages to show a progression of from simple queries to a modern data pipeline.
 
 A toy dataset was created for the purposes of this repo called Farm To Market: a dataset about local agriculture.
 
