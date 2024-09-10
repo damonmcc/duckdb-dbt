@@ -129,10 +129,12 @@ These datasets were chosen to show some of the ways source data can be imported 
 Use a data pipeline to build Farm To Market
 
 1. Download all source data from their Open Data pages by navigating to `Actions` -> `API` -> `Download file` -> `Export format: CSV`
-   > [!IMPORTANT]
-   > NYC Borough Boundaries must be downloaded as a geojson file.
+
+> [!TIP]
+> NYC Borough Boundaries must be downloaded as a geojson file.
+   
 2. Move the downloaded csv file to `data/source_data/`
-3. Run a python script to load all source data into a database:
+3. . Run a python script to load all source data into a database:
 
    ```bash
    python3 -m stage_2.load
