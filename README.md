@@ -12,7 +12,10 @@ A toy dataset was created for the purposes of this repo called Farm To Market: a
 
 Farm To Market captures where local food is sold and might be grown in New York City.
 
-This dataset combines the locations of farmers markets and potential farms (gardens, other suitable sites) to highlight availability and potential local suppliers of healthy produce in NYC.
+This dataset combines the locations of farmers markets and potential farms (community gardens) to highlight availability and potential local suppliers of healthy produce in NYC.
+
+> [!WARNING]
+> This dataset's design is in-progress and the data dictionary below may not represent the final columns of a build.
 
 ### Data Dictionary
 
