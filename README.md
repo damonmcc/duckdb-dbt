@@ -75,7 +75,7 @@ Source data:
 ### Python
 
 > [!NOTE]
-> Use of python version 3.12 and a virtual environment is recommended. We like to use [`pyenv`](https://github.com/pyenv/pyenv) and [`pyenv-virtualenv`](https://realpython.com/intro-to-pyenv/#virtual-environments-and-pyenv).
+> Use of python version 3.12 and a virtual environment is recommended. We like to use [`venv`](https://docs.python.org/3/library/venv.html) or [`pyenv`](https://github.com/pyenv/pyenv) + [`pyenv-virtualenv`](https://realpython.com/intro-to-pyenv/#virtual-environments-and-pyenv).
 
 Install the required python packages:
 
