@@ -2,7 +2,7 @@
 
 This repo is an example of using [duckdb](https://duckdb.org/) and [dbt](https://docs.getdbt.com/) to build data.
 
-The code is organzed into three stages to show a progression of from simple queries to a modern data pipeline.
+The code is organized into three stages to show a progression of from simple queries to a modern data pipeline.
 
 A toy dataset was created for the purposes of this repo called Farm To Market: a dataset about local agriculture.
 
@@ -115,8 +115,8 @@ These datasets were chosen to show some of the ways source data can be imported 
 ### Steps
 
 1. Download PLUTO from NYC Open Data [here](https://data.cityofnewyork.us/d/64uk-42ks/) by navigating to `Actions` -> `API` -> `Download file` -> `Export format: CSV`
-2. Move the downloaded csv file to `data/source_data/`
-3. Run a python script to load all source data into a database:
+2. Rename the downloaded csv file to `pluto.csv` and move it to `data/source_data/`.
+3. Run a python script to download the other 2 datasets programmatically and load all source data into a database:
 
    ```bash
    python3 -m stage_1.load
