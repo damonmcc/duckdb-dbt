@@ -37,7 +37,6 @@ source_datasets = [
 
 def _db_connection():
     connection = duckdb.connect(str(DATABASE_PATH))
-    connection.sql(f"LOAD spatial;")
     return connection
 
 
@@ -48,6 +47,7 @@ def create_database():
     connection = _db_connection()
     with _db_connection() as connection:
         connection.sql(f"INSTALL spatial;")
+        connection.sql(f"LOAD spatial;")
     print(f"✅ Created a persistent database at: {DATABASE_PATH}")
     return connection
 
