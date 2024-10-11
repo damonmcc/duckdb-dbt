@@ -23,9 +23,7 @@ def create_database():
 
 
 def load_pluto():
-    pluto_csv_path = (
-        SOURCE_DATA_DIRECTORY / "Primary_Land_Use_Tax_Lot_Output__PLUTO__20240818.csv"
-    )
+    pluto_csv_path = SOURCE_DATA_DIRECTORY / "pluto.csv"
     print("Creating PLUTO table from local csv ...")
     with duckdb.connect(str(DATABASE_PATH)) as connection:
         connection.sql(f"DESCRIBE TABLE '{pluto_csv_path}'").show()
