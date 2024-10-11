@@ -20,6 +20,8 @@ def inspect_remote_table():
 
 
 def create_simple_database():
+    # create database directory
+    DATABASE_DIRECTORY.mkdir(parents=True, exist_ok=True)
     # delete the database if it exists
     DATABASE_PATH.unlink(missing_ok=True)
     # create the database
