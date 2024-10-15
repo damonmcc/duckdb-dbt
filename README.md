@@ -80,7 +80,7 @@ Source data:
 Install the required python packages:
 
 ```bash
-python3 -m pip install --requirement setup/requirements.txt
+python -m pip install --requirement setup/requirements.txt
 ```
 
 Confirm packages listed in `setup/requirements.in` are installed:
@@ -97,7 +97,7 @@ pip list
 Run a python script to confirm everything is setup
 
 ```bash
-python3 -m stage_0.sanity_check
+python -m stage_0.sanity_check
 ```
 
 ## Stage 1: Load and explore data
@@ -119,7 +119,7 @@ These datasets were chosen to show some of the ways source data can be imported 
 3. Run a python script to load all source data into a database:
 
    ```bash
-   python3 -m stage_1.load
+   python -m stage_1.load
    ```
 
 4. Use the Jupyter notebook `stage_1/explore.ipynb` to explore the data
@@ -137,15 +137,15 @@ Use a data pipeline to build Farm To Market
 3. . Run a python script to load all source data into a database:
 
    ```bash
-   python3 -m stage_2.load
+   python -m stage_2.load
    ```
 
 4. (Optional) Use the Jupyter notebook `stage_2/explore.ipynb` to explore the source data
 5. Run python scripts to transform and export data:
 
    ```bash
-   python3 -m stage_2.transform
-   python3 -m stage_2.export
+   python -m stage_2.transform
+   python -m stage_2.export
    ```
 
 6. Use the Jupyter notebook `stage_2/analyze.ipynb` to review and analyze the dataset
