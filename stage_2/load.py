@@ -3,7 +3,7 @@ import duckdb
 from dataclasses import dataclass
 
 DATA_DIRECTORY = Path(__file__).parent.parent / "data"
-DATABASE_PATH = DATA_DIRECTORY / "databases" / "stage_2.db"
+DATABASE_PATH = DATA_DIRECTORY / "stage_2.db"
 SOURCE_DATA_DIRECTORY = DATA_DIRECTORY / "source_data"
 
 
