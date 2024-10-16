@@ -2,7 +2,7 @@ from pathlib import Path
 import duckdb
 
 DATA_DIRECTORY = Path(__file__).parent.parent / "data"
-DATABASE_PATH = DATA_DIRECTORY / "databases" / "stage_1.db"
+DATABASE_PATH = DATA_DIRECTORY / "stage_1.db"
 SOURCE_DATA_DIRECTORY = DATA_DIRECTORY / "source_data"
 
 
