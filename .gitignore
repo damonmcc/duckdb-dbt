@@ -4,9 +4,6 @@ __pycache__/
 # pyenv
 .python-version
 
-# data
-data/**/
-
 # duckdb
 *.db
 
