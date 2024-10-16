@@ -1,9 +1,11 @@
+import os
 from pathlib import Path
 import duckdb
 
 DATA_DIRECTORY = Path(__file__).parent.parent / "data"
 DATABASE_PATH = DATA_DIRECTORY / "stage_1.db"
 SOURCE_DATA_DIRECTORY = DATA_DIRECTORY / "source_data"
+HTTP_PROXY = os.environ["http_proxy"]
 
 
 def create_database():
@@ -11,7 +13,9 @@ def create_database():
     DATABASE_PATH.unlink(missing_ok=True)
     # create the database
     connection = duckdb.connect(str(DATABASE_PATH))
+    # install the spatial extension
     with duckdb.connect(str(DATABASE_PATH)) as connection:
+        connection.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
         connection.sql(f"INSTALL spatial")
         connection.sql(f"LOAD spatial")
     print(f"✅ Created a persistent database at: {DATABASE_PATH}")
