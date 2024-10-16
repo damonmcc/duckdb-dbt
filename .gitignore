@@ -5,7 +5,7 @@ __pycache__/
 .python-version
 
 # data
-data/**/
+data/databases/
 
 # duckdb
 *.db
