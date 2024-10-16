@@ -36,6 +36,7 @@ def load_airbnb():
     airbnb_nyc_detailed_listings_url = "https://data.insideairbnb.com/united-states/ny/new-york-city/2024-07-05/data/listings.csv.gz"
     print("Creating Airbnb NYC listings table from remote csv file ...")
     with duckdb.connect(str(DATABASE_PATH)) as connection:
+        connection.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
         connection.sql(f"DESCRIBE TABLE '{airbnb_nyc_listings_url}'").show()
         connection.sql(
             f"CREATE TABLE airbnb_nyc_listings as SELECT * FROM '{airbnb_nyc_listings_url}'"
@@ -44,6 +45,7 @@ def load_airbnb():
         "Creating Airbnb NYC detailed listings table from remote compressed csv file ..."
     )
     with duckdb.connect(str(DATABASE_PATH)) as connection:
+        connection.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
         connection.sql(f"DESCRIBE TABLE '{airbnb_nyc_detailed_listings_url}'").show()
         connection.sql(
             f"CREATE TABLE airbnb_nyc_detailed_listings as SELECT * FROM '{airbnb_nyc_detailed_listings_url}'"
@@ -72,6 +74,7 @@ def load_taxi():
     ]
     print("Creating Taxi tables from remote parquet files ...")
     with duckdb.connect(str(DATABASE_PATH)) as connection:
+        connection.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
         for remote_table in tlc_trip_urls:
             connection.sql(f"DESCRIBE TABLE '{remote_table}'").show()
         connection.sql(
