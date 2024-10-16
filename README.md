@@ -70,27 +70,41 @@ Source data:
 - GreenThumb Block-Lot [[source](https://data.cityofnewyork.us/dataset/GreenThumb-Block-Lot/fsjc-9fyh/about_data)]
 <!-- - https://data.cityofnewyork.us/City-Government/Suitability-of-City-Owned-and-Leased-Property-for-/4e2n-s75z/about_data -->
 
-## Setup
+## Development
 
-### Python
+### Installations
 
-> [!NOTE]
-> Use of python version 3.12 and a virtual environment is recommended. We like to use [`venv`](https://docs.python.org/3/library/venv.html) or [`pyenv`](https://github.com/pyenv/pyenv) + [`pyenv-virtualenv`](https://realpython.com/intro-to-pyenv/#virtual-environments-and-pyenv).
+- VS Code [[link](https://code.visualstudio.com/)] for an integrated development environment
+- git [[link](https://git-scm.com/downloads)] for cloning this repo and installing `bash` terminal
+- Python 3.12 [[link](https://www.python.org/downloads/release/python-3120/)] for running python code
 
-Install the required python packages:
+### Setup
 
-```bash
-python -m pip install --requirement setup/requirements.txt
-```
+1. Setup a python virtual environment named `.venv` either using `python -m venv .venv` or using the VS Code command `Python: create environment`
 
-Confirm packages listed in `setup/requirements.in` are installed:
+2. Activate the virtual environment
 
-```bash
-pip list
-```
+   ```bash
+   source .venv/Scripts/activate
+   ```
 
-> [!TIP]
-> Use `pip freeze | xargs pip uninstall -y` to uninstall all python packages.
+3. Install packages and confirm setup
+
+   ```bash
+   python -m pip install --requirement setup/requirements.txt
+   pip list
+   ```
+
+> [!IMPORTANT]
+> For NYC government employees, most work computers access the internet through a firewall. This causes issues when writing and running code (e.g. `pip install` fails).
+>
+> See instructions below to allow code to access the internet on a city-issued PC.
+>
+> 1. Search for an select `Edit environment variables for your account` in the Start menu
+>
+> 2. Add two environment variables with the same value of `http://bcpxy.nycnet:8080`:
+>    - `http_proxy`
+>    - `https_proxy`
 
 ## Stage 0: Sanity Check
 
