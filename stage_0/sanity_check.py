@@ -2,8 +2,8 @@ import os
 from pathlib import Path
 import duckdb
 
-DATABASE_DIRECTORY = Path(__file__).parent.parent / "data" / "databases"
-DATABASE_PATH = DATABASE_DIRECTORY / "sanity_check.db"
+DATA_DIRECTORY = Path(__file__).parent.parent / "data"
+DATABASE_PATH = DATA_DIRECTORY / "sanity_check.db"
 HTTP_PROXY = os.environ["http_proxy"]
 
 
