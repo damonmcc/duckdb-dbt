@@ -13,8 +13,8 @@ python -m pip install --upgrade pip
 python -m pip install --upgrade pip-tools wheel
 
 # Delete existing requirements file to ensure full dependency resolution
-echo -e "🛠 deleting ${path_to_requirements}/requirements-dev.txt"
-rm -f ${path_to_requirements}/requirements-dev.txt
+echo -e "🛠 deleting ${path_to_requirements}/requirements.txt"
+rm -f ${path_to_requirements}/requirements.txt
 
 # Compile requirements
 echo -e "🛠 compiling from ${path_to_requirements}/requirements.in and ${path_to_requirements}/requirements-dev.in"
