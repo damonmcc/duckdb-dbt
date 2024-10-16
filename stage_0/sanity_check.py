@@ -1,8 +1,10 @@
+import os
 from pathlib import Path
 import duckdb
 
 DATABASE_DIRECTORY = Path(__file__).parent.parent / "data" / "databases"
 DATABASE_PATH = DATABASE_DIRECTORY / "sanity_check.db"
+HTTP_PROXY = os.environ["http_proxy"]
 
 
 def duckdb_environment():
@@ -11,6 +13,7 @@ def duckdb_environment():
 
 
 def inspect_remote_table():
+    duckdb.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
     duckdb.sql(
         "DESCRIBE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
     ).show()
