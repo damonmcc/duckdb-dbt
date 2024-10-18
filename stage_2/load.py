@@ -22,15 +22,15 @@ source_datasets = [
     ),
     SourceDataset(
         table_name="farmers_markets",
-        file_path=SOURCE_DATA_DIRECTORY / "NYC_Farmers_Markets_20240819.csv",
+        file_path=SOURCE_DATA_DIRECTORY / "NYC_Farmers_Markets_20241018.csv",
     ),
     SourceDataset(
         table_name="garden_info",
-        file_path=SOURCE_DATA_DIRECTORY / "GreenThumb_Garden_Info_20240819.csv",
+        file_path=SOURCE_DATA_DIRECTORY / "GreenThumb_Garden_Info_20241018.csv",
     ),
     SourceDataset(
         table_name="garden_block_lot",
-        file_path=SOURCE_DATA_DIRECTORY / "GreenThumb_Block-Lot_20240819.csv",
+        file_path=SOURCE_DATA_DIRECTORY / "GreenThumb_Block-Lot_20241018.csv",
     ),
 ]
 
