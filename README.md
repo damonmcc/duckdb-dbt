@@ -144,8 +144,8 @@ Use a data pipeline to build Farm To Market
 
 1. Download all source data from their Open Data pages by navigating to `Actions` -> `API` -> `Download file` -> `Export format: CSV`
 
-   > [!TIP]
-   > NYC Borough Boundaries must be downloaded as a geojson file by navigating to `Export` -> `Download Geospatial Data` -> `GeoJSON`.
+> [!TIP]
+> NYC Borough Boundaries must be downloaded as a geojson file by navigating to `Export` -> `Download Geospatial Data` -> `GeoJSON`.
 
 2. Move the downloaded csv file to `data/source_data/`
 3. . Run a python script to load all source data into a database:
@@ -154,34 +154,39 @@ Use a data pipeline to build Farm To Market
    python -m stage_2.load
    ```
 
-4. (Optional) Use the Jupyter notebook `stage_2/explore.ipynb` to explore the source data
-5. Run python scripts to transform and export data:
+4. Run python scripts to transform and export data:
 
    ```bash
    python -m stage_2.transform
    python -m stage_2.export
    ```
-
+5. (Optional) Use the Jupyter notebook `stage_2/explore.ipynb` to explore the source data
 6. Use the Jupyter notebook `stage_2/analyze.ipynb` to review and analyze the dataset
 
 ## Stage 3: dbt pipeline
 
 Use dbt to build to build Farm To Market
 
-1. Install dbt packages and confirm setup:
+1. Navigate to `stage_3` directory:
+
+```bash
+cd stage_3
+```
+
+2. Install dbt packages and confirm setup:
 
    ```bash
    dbt deps
    dbt debug
    ```
 
-2. Test source data:
+3. Test source data:
 
    ```bash
    dbt test --select "source:*"
    ```
 
-3. Build the dataset:
+4. Build the dataset:
 
    ```bash
    dbt build
