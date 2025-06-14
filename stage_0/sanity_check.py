@@ -12,11 +12,13 @@ else:
 
 
 def duckdb_environment():
+    print("Starting duckdb_environment() ...")
     duckdb.sql("PRAGMA version").show()
     duckdb.sql("PRAGMA platform").show()
 
 
 def create_simple_database():
+    print("Starting create_simple_database() ...")
     # delete the database if it exists
     DATABASE_PATH.unlink(missing_ok=True)
     # create the database
@@ -39,6 +41,7 @@ def create_simple_database():
 
 
 def inspect_remote_table():
+    print("Starting inspect_remote_table() ...")
     duckdb.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
     duckdb.sql(
         "DESCRIBE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
