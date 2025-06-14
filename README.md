@@ -1,10 +1,15 @@
 # duckdb-dbt
 
-This repo is an example of using [duckdb](https://duckdb.org/) and [dbt](https://docs.getdbt.com/) to build data.
+This repo is a demonstration of using [DuckDB](https://duckdb.org/) and [dbt](https://docs.getdbt.com/) to build and analyze data.
 
-The code is organized into three stages to show a progression of from simple queries to a modern data pipeline.
+A fictional dataset about local agriculture called `Farm to Market` was created for the purposes of this repo.
 
-A toy dataset was created for the purposes of this repo called Farm To Market: a dataset about local agriculture.
+The code is organized into three stages to show a progression of from simple queries to a data pipeline.
+
+- Stage 0: confirm everything is setup correctly
+- Stage 1: load and explore data
+- Stage 2: use a data pipeline to build Farm to Market
+- Stage 3: use dbt to build Farm to Market
 
 ## Farm To Market
 
