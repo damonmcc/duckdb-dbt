@@ -46,7 +46,7 @@ Source data:
 ## Setup
 
 > [!NOTE]
-> All examples of commands are written for Bash on macOS. You can run `echo $SHELL` to help you determine your shell and then, when necessary, can find relevant docs to run the correct commands for your shell/OS.
+> All examples of commands are written for Bash on Unix-based operating systems. You can run `echo $SHELL` to help you determine your shell and then, when necessary, can find relevant docs to run the correct commands for your shell/operating system.
 
 ### Prerequisites
 
@@ -80,7 +80,7 @@ Optional
 3. Activate the virtual environment
 
    ```bash
-   source .venv/Scripts/activate
+   source .venv/bin/activate
    ```
 
 4. Install packages and confirm setup
