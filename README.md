@@ -2,7 +2,7 @@
 
 This repo is a demonstration of using [DuckDB](https://duckdb.org/) and [dbt](https://docs.getdbt.com/) to build and analyze data.
 
-A fictional dataset about local agriculture called `Farm to Market` was created for the purposes of this repo.
+A fictional dataset about local agriculture called `Farm To Market` was created for the purposes of this repo.
 
 The code is organized into three stages to show a progression of from simple queries to a data pipeline.
 
@@ -19,51 +19,19 @@ Farm To Market captures where local food is sold and might be grown in New York 
 
 This dataset combines the locations of farmers markets and potential farms (community gardens) to highlight availability and potential local suppliers of healthy produce in NYC.
 
-> [!WARNING]
-> This dataset's design is in-progress and the data dictionary below may not represent the final columns of a build.
+### Final tables
 
-### Data Dictionary
-
-`farm_to_market` table
-
-Each row is a market and farm pair
-
-- `market_name`
-- `farm_name`
-- `suitability_score`
-- `distance_ft`
-- `line_geometry_wgs84`
-
-`markets` table
+`markets`
 
 Each row is a farmers market
 
-- `market_name`
-- `accepts_ebt`
-- `distributes_health_bucks`
-- `open_year_round`
-- `address`
-- `borough`
-- `latitude`
-- `longitude`
-- `geometry_is_in_nyc`
-- `point_geometry_wgs84`
-
-`farms` table
+`farms`
 
 Each row is a potential farm
 
-- `type`
-- `farm_name`
-- `area_sqft`
-- `whole_lot`
-- `address`
-- `borough`
-- `bbl`
-- `latitude`
-- `longitude`
-- `point_geometry_wgs84`
-- `polygon_geometry_wgs84`
+`farm_to_market`
+
+Each row is a market and farm pair
 
 ### Source data
 
