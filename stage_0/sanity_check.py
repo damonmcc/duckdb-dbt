@@ -1,25 +1,19 @@
 import os
 from pathlib import Path
 import duckdb
+import platform
 
 DATA_DIRECTORY = Path(__file__).parent.parent / "data"
 DATABASE_PATH = DATA_DIRECTORY / "sanity_check.db"
-HTTP_PROXY = os.environ["http_proxy"]
+if platform.system() == "Windows":
+    HTTP_PROXY = os.environ["http_proxy"]
+else:
+    HTTP_PROXY = ""
 
 
 def duckdb_environment():
     duckdb.sql("PRAGMA version").show()
     duckdb.sql("PRAGMA platform").show()
-
-
-def inspect_remote_table():
-    duckdb.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
-    duckdb.sql(
-        "DESCRIBE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
-    ).show()
-    duckdb.sql(
-        "SUMMARIZE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
-    ).show()
 
 
 def create_simple_database():
@@ -44,8 +38,18 @@ def create_simple_database():
     print(results)
 
 
+def inspect_remote_table():
+    duckdb.sql(f"SET http_proxy TO '{HTTP_PROXY}'")
+    duckdb.sql(
+        "DESCRIBE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
+    ).show()
+    duckdb.sql(
+        "SUMMARIZE TABLE 'https://blobs.duckdb.org/data/Star_Trek-Season_1.csv'"
+    ).show()
+
+
 if __name__ == "__main__":
     duckdb_environment()
-    inspect_remote_table()
     create_simple_database()
+    inspect_remote_table()
     print("✅ Sanity check successful!")
