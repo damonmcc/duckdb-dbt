@@ -108,10 +108,10 @@ These datasets were chosen to show some of the ways source data can be imported 
 - NYC Airbnb data ([source](https://insideairbnb.com/get-the-data/))
 - Trip record data from the NYC Taxi and Limousine Commission (TLC) ([source](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page))
 
-1. Download PLUTO from NYC Open Data [here](https://data.cityofnewyork.us/d/64uk-42ks/) by navigating to `Export` -> `Download file` -> `Export format: CSV`
+1. Download PLUTO from [NYC Open Data](https://data.cityofnewyork.us/d/64uk-42ks/) by navigating to `Export` -> `Download file` -> `Export format: CSV`
 
-> [!TIP]
-> If the Open Data download takes too long, try downloading from DCP's site Bytes of the Big Apple ([link](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)).
+   > [!TIP]
+   > If the NYC Open Data download takes too long, try downloading it from the [NYC Department of City Planning](https://www.nyc.gov/content/planning/pages/resources/datasets/mappluto-pluto-change).
 
 2. Rename the downloaded csv file to `pluto.csv` and move it to `data/source_data/`
 
