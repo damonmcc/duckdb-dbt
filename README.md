@@ -134,15 +134,11 @@ python -m stage_0.sanity_check
 
 Load and explore data from various sources
 
-### Source data
-
 These datasets were chosen to show some of the ways source data can be imported with DuckDB.
 
 - PLUTO from the NYC Department of City Planning ([source](https://data.cityofnewyork.us/d/64uk-42ks/))
 - NYC Airbnb data ([source](https://insideairbnb.com/get-the-data/))
 - Trip record data from the NYC Taxi and Limousine Commission (TLC) ([source](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page))
-
-### Steps
 
 1. Download PLUTO from NYC Open Data [here](https://data.cityofnewyork.us/d/64uk-42ks/) by navigating to `Export` -> `Download file` -> `Export format: CSV`
 
@@ -163,13 +159,11 @@ These datasets were chosen to show some of the ways source data can be imported 
 
 Use a data pipeline to build Farm To Market
 
-1. Download all source data from their Open Data pages by navigating to `Actions` -> `API` -> `Download file` -> `Export format: CSV`
+1. Download all source data from their Open Data pages by navigating to `Export` -> `Download file`. Depending on the dataset, either download a CSV or a GeoJSON file.
 
-> [!TIP]
-> NYC Borough Boundaries must be downloaded as a geojson file by navigating to `Export` -> `Download Geospatial Data` -> `GeoJSON`.
+2. Rename the downloaded files to remove the dates and move them to `data/source_data/`
 
-2. Move the downloaded csv file to `data/source_data/`
-3. . Run a python script to load all source data into a database:
+3. Run a python script to load all source data into a database:
 
    ```bash
    python -m stage_2.load
@@ -181,34 +175,43 @@ Use a data pipeline to build Farm To Market
    python -m stage_2.transform
    python -m stage_2.export
    ```
-5. (Optional) Use the Jupyter notebook `stage_2/explore.ipynb` to explore the source data
-6. Use the Jupyter notebook `stage_2/analyze.ipynb` to review and analyze the dataset
+
+5. Use the Jupyter notebook `stage_2/analyze.ipynb` to review and analyze the dataset
 
 ## Stage 3: dbt pipeline
 
-Use dbt to build to build Farm To Market
+Use dbt to build Farm to Market
 
-1. Navigate to `stage_3` directory:
+1. Download and rename source data as described in Stage 2
 
-```bash
-cd stage_3
-```
+2. Navigate to the `stage_3` folder:
 
-2. Install dbt packages and confirm setup:
+   ```bash
+   cd stage_3
+   ```
+
+3. Install dbt packages and confirm setup:
 
    ```bash
    dbt deps
    dbt debug
    ```
 
-3. Test source data:
+4. Test source data:
 
    ```bash
    dbt test --select "source:*"
    ```
 
-4. Build the dataset:
+5. Build the dataset:
 
    ```bash
    dbt build
+   ```
+
+6. Generate and view data documentation:
+
+   ```bash
+   dbt docs generate
+   dbt docs serve
    ```
