@@ -75,41 +75,52 @@ Source data:
 - GreenThumb Block-Lot [[source](https://data.cityofnewyork.us/dataset/GreenThumb-Block-Lot/fsjc-9fyh/about_data)]
 <!-- - https://data.cityofnewyork.us/City-Government/Suitability-of-City-Owned-and-Leased-Property-for-/4e2n-s75z/about_data -->
 
-## Development
+## Setup
 
-### Installations
+> [!NOTE]
+> All examples of commands are written for Bash on macOS. You can run `echo $SHELL` to help you determine your shell and then, when necessary, can find relevant docs to run the correct commands for your shell/OS.
 
-- VS Code [[link](https://code.visualstudio.com/)] for an integrated development environment
-- git [[link](https://git-scm.com/downloads)] for cloning this repo and installing `bash` terminal
-- Python 3.12 [[link](https://www.python.org/downloads/release/python-3120/)] for running python code
+### Prerequisites
 
-### Setup
+Required
 
-1. Setup a python virtual environment named `.venv` either using `python -m venv .venv` or using the VS Code command `Python: create environment`
+- [Python 3.12](https://www.python.org/downloads/release/python-3120/) for running python code (any version >=3.9 works)
+- [git](https://git-scm.com/downloads) for cloning this repo and installing `bash` terminal
 
-2. Activate the virtual environment
+Optional
+
+- [VS Code](https://code.visualstudio.com/) for an integrated development environment (IDE) and the Python extension
+- [DBeaver](https://dbeaver.io/) for querying a database
+
+### Environment
+
+1. Clone this repo and navigate to the new folder:
+
+    ```bash
+    git clone https://github.com/damonmcc/duckdb-dbt.git
+    cd duckdb-dbt
+    ```
+
+2. Create a python virtual environment named `.venv` either using the command below or using the VS Code command `Python: create environment`
+
+    ```bash
+    which python
+    python --version
+    python -m venv .venv
+    ```
+
+3. Activate the virtual environment
 
    ```bash
    source .venv/Scripts/activate
    ```
 
-3. Install packages and confirm setup
+4. Install packages and confirm setup
 
    ```bash
    python -m pip install --requirement setup/requirements.txt
    pip list
    ```
-
-> [!IMPORTANT]
-> For NYC government employees, most work computers access the internet through a firewall. This causes issues when writing and running code (e.g. `pip install` fails).
->
-> See instructions below to allow code to access the internet on a city-issued PC.
->
-> 1. Search for an select `Edit environment variables for your account` in the Start menu
->
-> 2. Add two environment variables with the same value of `http://bcpxy.nycnet:8080`:
->    - `http_proxy`
->    - `https_proxy`
 
 ## Stage 0: Sanity Check
 
