@@ -37,10 +37,10 @@ Each row is a market and farm pair
 
 Source data:
 
-- NYC Borough Boundaries [[source](https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm)]
-- NYC Farmers Markets [[source](https://data.cityofnewyork.us/Health/NYC-Farmers-Markets/8vwk-6iz2/about_data)]
-- GreenThumb Garden Info [[source](https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6/about_data)]
-- GreenThumb Block-Lot [[source](https://data.cityofnewyork.us/dataset/GreenThumb-Block-Lot/fsjc-9fyh/about_data)]
+- NYC Borough Boundaries ([geojson source](https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm))
+- NYC Farmers Markets ([csv source](https://data.cityofnewyork.us/Health/NYC-Farmers-Markets/8vwk-6iz2/about_data))
+- GreenThumb Garden Info ([csv source](https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6/about_data))
+- GreenThumb Block-Lot ([csv source](https://data.cityofnewyork.us/dataset/GreenThumb-Block-Lot/fsjc-9fyh/about_data))
 <!-- - https://data.cityofnewyork.us/City-Government/Suitability-of-City-Owned-and-Leased-Property-for-/4e2n-s75z/about_data -->
 
 ## Setup
@@ -127,7 +127,7 @@ These datasets were chosen to show some of the ways source data can be imported 
 
 Use a data pipeline to build Farm To Market
 
-1. Download all source data from their Open Data pages by navigating to `Export` -> `Download file`. Depending on the dataset, either download a CSV or a GeoJSON file.
+1. Download all Farm To Market source data from their Open Data pages by navigating to `Export` -> `Download file`. Depending on the dataset, either download a CSV or a GeoJSON file.
 
 2. Rename the downloaded files to remove the dates and move them to `data/source_data/`
 
