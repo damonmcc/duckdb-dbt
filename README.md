@@ -90,7 +90,9 @@ Optional
    pip list
    ```
 
-## Stage 0: Sanity Check
+## Usage
+
+### Stage 0: Sanity Check
 
 Run a python script to confirm everything is setup
 
@@ -98,7 +100,7 @@ Run a python script to confirm everything is setup
 python -m stage_0.sanity_check
 ```
 
-## Stage 1: Load and explore data
+### Stage 1: Load and explore data
 
 Load and explore data from various sources
 
@@ -123,7 +125,7 @@ These datasets were chosen to show some of the ways source data can be imported 
 
 4. Use the Jupyter notebook `stage_1/explore.ipynb` or DBeaver to explore the data
 
-## Stage 2: Pipeline
+### Stage 2: Pipeline
 
 Use a data pipeline to build Farm To Market
 
@@ -146,7 +148,7 @@ Use a data pipeline to build Farm To Market
 
 5. Use the Jupyter notebook `stage_2/analyze.ipynb` to review and analyze the dataset
 
-## Stage 3: dbt pipeline
+### Stage 3: dbt pipeline
 
 Use dbt to build Farm to Market
 
@@ -183,6 +185,11 @@ Use dbt to build Farm to Market
    dbt docs generate
    dbt docs serve
    ```
+
+## Development
+
+- Format SQL files with `sqlfluff fix models`
+- Add new python packages to `requirements.in` and recompile with `./setup/compile_python_packages.sh`
 
 ## Resources
 
