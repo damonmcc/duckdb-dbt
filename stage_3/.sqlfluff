@@ -1,0 +1,9 @@
+[sqlfluff]
+templater = dbt
+dialect = duckdb
+
+[sqlfluff:rules:convention.select_trailing_comma]
+select_clause_trailing_comma = require
+
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = upper
