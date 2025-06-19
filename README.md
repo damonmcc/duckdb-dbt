@@ -37,10 +37,10 @@ Each row is a market and farm pair
 
 Source data:
 
-- NYC Borough Boundaries ([geojson source](https://data.cityofnewyork.us/City-Government/Borough-Boundaries/gthc-hcne))
-- NYC Farmers Markets ([csv source](https://data.cityofnewyork.us/Health/NYC-Farmers-Markets/8vwk-6iz2/about_data))
-- GreenThumb Garden Info ([csv source](https://data.cityofnewyork.us/dataset/GreenThumb-Garden-Info/p78i-pat6/about_data))
-- GreenThumb Block-Lot ([csv source](https://data.cityofnewyork.us/dataset/GreenThumb-Block-Lot/fsjc-9fyh/about_data))
+- NYC Borough Boundaries ([geojson source](https://data.cityofnewyork.us/d/gthc-hcne))
+- NYC Farmers Markets ([csv source](https://data.cityofnewyork.us/d/8vwk-6iz2/))
+- GreenThumb Garden Info ([csv source](https://data.cityofnewyork.us/d/p78i-pat6/))
+- GreenThumb Block-Lot ([csv source](https://data.cityofnewyork.us/d/fsjc-9fyh/))
 <!-- - https://data.cityofnewyork.us/City-Government/Suitability-of-City-Owned-and-Leased-Property-for-/4e2n-s75z/about_data -->
 
 ## Setup
