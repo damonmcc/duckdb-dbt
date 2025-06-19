@@ -183,3 +183,11 @@ Use dbt to build Farm to Market
    dbt docs generate
    dbt docs serve
    ```
+
+## Resources
+
+[DuckDB Guides - DuckDB Foundation](https://duckdb.org/docs/stable/guides/overview)
+
+[What is dbt? - dbt Labs](https://docs.getdbt.com/docs/introduction)
+
+[dbt Best practices - dbt Labs](https://docs.getdbt.com/best-practices)
