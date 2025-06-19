@@ -225,6 +225,8 @@ Use dbt to build Farm to Market
    dbt docs serve
    ```
 
+7. Inspect and use the data by using the notebooks in `stage_3/analysis/`
+
 ## Development
 
 - Format python files with `black fix directory_or_file_path`
