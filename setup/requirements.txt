@@ -9,9 +9,7 @@ agate==1.9.1
     #   dbt-adapters
     #   dbt-common
     #   dbt-core
-annotated-types==0.7.0
-    # via pydantic
-anywidget==0.9.16
+anywidget==0.9.18
     # via
     #   lonboard
     #   pygwalker
@@ -19,14 +17,14 @@ appdirs==1.4.4
     # via pygwalker
 appnope==0.1.4
     # via ipykernel
-arro3-compute==0.4.6
+arro3-compute==0.5.1
     # via lonboard
-arro3-core==0.4.6
+arro3-core==0.5.1
     # via
     #   arro3-compute
     #   arro3-io
     #   lonboard
-arro3-io==0.4.6
+arro3-io==0.5.1
     # via lonboard
 arrow==1.3.0
     # via pygwalker
@@ -46,15 +44,15 @@ backoff==2.2.1
     #   segment-analytics-python
 black==25.1.0
     # via -r setup/requirements-dev.in
-cachetools==5.5.2
+cachetools==6.1.0
     # via pygwalker
-certifi==2025.1.31
+certifi==2025.6.15
     # via
     #   pyproj
     #   requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
-click==8.1.8
+click==8.2.1
     # via
     #   black
     #   dbt-core
@@ -65,58 +63,63 @@ comm==0.2.2
     # via
     #   ipykernel
     #   ipywidgets
-contourpy==1.3.1
+contourpy==1.3.2
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
-daff==1.3.46
+daff==1.4.2
     # via dbt-core
 dateutils==0.6.12
     # via kanaries-track
-dbt-adapters==1.14.3
+dbt-adapters==1.16.0
     # via
     #   dbt-core
     #   dbt-duckdb
-dbt-common==1.16.0
+dbt-common==1.25.0
     # via
     #   dbt-adapters
     #   dbt-core
     #   dbt-duckdb
-dbt-core==1.9.3
+dbt-core==1.10.1
     # via
     #   -r setup/requirements.in
     #   dbt-duckdb
-dbt-duckdb==1.9.2
+dbt-duckdb==1.9.3
     # via -r setup/requirements.in
-dbt-extractor==0.5.1
+dbt-extractor==0.6.0
     # via dbt-core
-dbt-semantic-interfaces==0.7.4
+dbt-protos==1.0.330
+    # via
+    #   dbt-adapters
+    #   dbt-common
+    #   dbt-core
+dbt-semantic-interfaces==0.8.4
     # via dbt-core
-debugpy==1.8.13
+debugpy==1.8.14
     # via ipykernel
 decorator==5.2.1
     # via ipython
 deepdiff==7.0.1
     # via dbt-common
-duckdb==1.2.1
+duckdb==1.3.1
     # via
     #   -r setup/requirements.in
     #   dbt-duckdb
     #   duckdb-engine
     #   pygwalker
-duckdb-engine==0.15.0
+duckdb-engine==0.17.0
     # via -r setup/requirements.in
 executing==2.2.0
     # via stack-data
-fonttools==4.56.0
+fonttools==4.58.4
     # via matplotlib
-greenlet==3.1.1
+greenlet==3.2.3
     # via sqlalchemy
 gw-dsl-parser==0.1.49.1
     # via pygwalker
 idna==3.10
     # via requests
-importlib-metadata==6.11.0
+importlib-metadata==8.7.0
     # via dbt-semantic-interfaces
 importlib-resources==6.5.2
     # via wasmtime
@@ -124,14 +127,14 @@ ipykernel==6.29.5
     # via -r setup/requirements.in
 ipylab==1.0.0
     # via pygwalker
-ipython==9.0.2
+ipython==9.3.0
     # via
     #   ipykernel
     #   ipywidgets
     #   pygwalker
 ipython-pygments-lexers==1.1.1
     # via ipython
-ipywidgets==8.1.5
+ipywidgets==8.1.7
     # via
     #   anywidget
     #   ipylab
@@ -149,19 +152,20 @@ jinja2==3.1.6
     #   dbt-core
     #   dbt-semantic-interfaces
     #   pygwalker
-jsonschema==4.23.0
+jsonschema==4.24.0
     # via
     #   dbt-common
+    #   dbt-core
     #   dbt-semantic-interfaces
-jsonschema-specifications==2024.10.1
+jsonschema-specifications==2025.4.1
     # via jsonschema
 jupyter-client==8.6.3
     # via ipykernel
-jupyter-core==5.7.2
+jupyter-core==5.8.1
     # via
     #   ipykernel
     #   jupyter-client
-jupyterlab-widgets==3.0.13
+jupyterlab-widgets==3.0.15
     # via ipywidgets
 kanaries-track==0.0.5
     # via pygwalker
@@ -169,7 +173,7 @@ kiwisolver==1.4.8
     # via matplotlib
 leather==0.4.0
     # via agate
-lonboard==0.10.4
+lonboard==0.11.1
     # via -r setup/requirements.in
 markupsafe==3.0.2
     # via jinja2
@@ -178,7 +182,7 @@ mashumaro[msgpack]==3.14
     #   dbt-adapters
     #   dbt-common
     #   dbt-core
-matplotlib==3.10.1
+matplotlib==3.10.3
     # via seaborn
 matplotlib-inline==0.1.7
     # via
@@ -186,21 +190,21 @@ matplotlib-inline==0.1.7
     #   ipython
 monotonic==1.6
     # via segment-analytics-python
-more-itertools==10.6.0
+more-itertools==10.7.0
     # via dbt-semantic-interfaces
-msgpack==1.1.0
+msgpack==1.1.1
     # via mashumaro
-mypy==1.15.0
+mypy==1.16.1
     # via -r setup/requirements-dev.in
-mypy-extensions==1.0.0
+mypy-extensions==1.1.0
     # via
     #   black
     #   mypy
 nest-asyncio==1.6.0
     # via ipykernel
-networkx==3.4.2
+networkx==3.5
     # via dbt-core
-numpy==2.2.4
+numpy==2.3.0
     # via
     #   contourpy
     #   lonboard
@@ -210,7 +214,7 @@ numpy==2.2.4
     #   seaborn
 ordered-set==4.1.0
     # via deepdiff
-packaging==24.2
+packaging==25.0
     # via
     #   black
     #   dbt-core
@@ -218,7 +222,7 @@ packaging==24.2
     #   ipykernel
     #   matplotlib
     #   pygwalker
-pandas==2.2.3
+pandas==2.3.0
     # via
     #   -r setup/requirements.in
     #   pygwalker
@@ -232,46 +236,47 @@ pathspec==0.12.1
     #   black
     #   dbt-common
     #   dbt-core
+    #   mypy
 pexpect==4.9.0
     # via ipython
-pillow==11.1.0
+pillow==11.2.1
     # via matplotlib
-platformdirs==4.3.7
+platformdirs==4.3.8
     # via
     #   black
     #   jupyter-core
-prompt-toolkit==3.0.50
+prompt-toolkit==3.0.51
     # via ipython
-protobuf==5.29.4
+protobuf==5.29.5
     # via
     #   dbt-adapters
     #   dbt-common
     #   dbt-core
+    #   dbt-protos
 psutil==7.0.0
     # via
     #   ipykernel
     #   pygwalker
-psygnal==0.12.0
+psygnal==0.13.0
     # via anywidget
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.3
     # via stack-data
-pyarrow==19.0.1
+pyarrow==20.0.0
     # via pygwalker
-pydantic==2.10.6
+pydantic==1.10.22
     # via
+    #   dbt-core
     #   dbt-semantic-interfaces
     #   pygwalker
-pydantic-core==2.27.2
-    # via pydantic
 pygments==2.19.1
     # via
     #   ipython
     #   ipython-pygments-lexers
-pygwalker==0.4.9.14
+pygwalker==0.4.9.15
     # via -r setup/requirements.in
-pyparsing==3.2.1
+pyparsing==3.2.3
     # via matplotlib
 pyproj==3.7.1
     # via lonboard
@@ -289,7 +294,7 @@ python-slugify==8.0.4
     # via agate
 pytimeparse==1.1.8
     # via agate
-pytz==2025.1
+pytz==2025.2
     # via
     #   dateutils
     #   dbt-adapters
@@ -300,7 +305,7 @@ pyyaml==6.0.2
     # via
     #   dbt-core
     #   dbt-semantic-interfaces
-pyzmq==26.3.0
+pyzmq==27.0.0
     # via
     #   ipykernel
     #   jupyter-client
@@ -310,7 +315,7 @@ referencing==0.36.2
     # via
     #   jsonschema
     #   jsonschema-specifications
-requests==2.32.3
+requests==2.32.4
     # via
     #   dbt-common
     #   dbt-core
@@ -318,7 +323,7 @@ requests==2.32.3
     #   pygwalker
     #   segment-analytics-python
     #   snowplow-tracker
-rpds-py==0.23.1
+rpds-py==0.25.1
     # via
     #   jsonschema
     #   referencing
@@ -332,11 +337,11 @@ six==1.17.0
     #   python-dateutil
 snowplow-tracker==1.1.0
     # via dbt-core
-sqlalchemy==2.0.39
+sqlalchemy==2.0.41
     # via
     #   duckdb-engine
     #   pygwalker
-sqlglot==26.11.1
+sqlglot==26.29.0
     # via pygwalker
 sqlparse==0.5.3
     # via dbt-core
@@ -344,7 +349,7 @@ stack-data==0.6.3
     # via ipython
 text-unidecode==1.3
     # via python-slugify
-tornado==6.4.2
+tornado==6.5.1
     # via
     #   ipykernel
     #   jupyter-client
@@ -359,9 +364,9 @@ traitlets==5.14.3
     #   lonboard
     #   matplotlib-inline
     #   pygwalker
-types-python-dateutil==2.9.0.20241206
+types-python-dateutil==2.9.0.20250516
     # via arrow
-typing-extensions==4.12.2
+typing-extensions==4.14.0
     # via
     #   anywidget
     #   dbt-adapters
@@ -371,20 +376,19 @@ typing-extensions==4.12.2
     #   mashumaro
     #   mypy
     #   pydantic
-    #   pydantic-core
     #   pygwalker
     #   referencing
     #   snowplow-tracker
     #   sqlalchemy
-tzdata==2025.1
+tzdata==2025.2
     # via pandas
-urllib3==2.3.0
+urllib3==2.5.0
     # via requests
-wasmtime==30.0.0
+wasmtime==33.0.0
     # via gw-dsl-parser
 wcwidth==0.2.13
     # via prompt-toolkit
-widgetsnbextension==4.0.13
+widgetsnbextension==4.0.14
     # via ipywidgets
-zipp==3.21.0
+zipp==3.23.0
     # via importlib-metadata
