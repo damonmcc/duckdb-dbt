@@ -186,6 +186,8 @@ Use dbt to build Farm to Market
    dbt docs serve
    ```
 
+7. Run and add to the notebooks in `stage_3/analysis/` to use the data
+
 ## Development
 
 - Format SQL files with `sqlfluff fix models`
