@@ -12,8 +12,8 @@ boroughs AS (
 
 all_garden_details AS (
     SELECT
-        garden_info.* EXCLUDE (gardenname),
-        garden_block_lot.* EXCLUDE (parksid),
+        garden_info.* EXCLUDE (garden_info.gardenname),
+        garden_block_lot.* EXCLUDE (garden_block_lot.parksid),
         garden_info.gardenname AS farm_name,
     FROM
         garden_info
