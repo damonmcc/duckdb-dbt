@@ -227,7 +227,8 @@ Use dbt to build Farm to Market
 
 ## Development
 
-- Format SQL files with `sqlfluff fix models`
+- Format python files with `black fix directory_or_file_path`
+- Format SQL files with `sqlfluff fix directory_or_file_path`
 - Add new python packages to `requirements.in` and recompile with `./setup/compile_python_packages.sh`
 
 ## Resources
