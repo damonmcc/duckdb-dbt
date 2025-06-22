@@ -1,6 +1,3 @@
-{{ config(materialized='external', location='../data/output/stage_3/farm_to_market.csv') }}
-{{ config(materialized='external', location='../data/output/stage_3/farm_to_market.parquet') }}
-
 WITH markets AS (SELECT *, FROM {{ ref('stg__markets') }}),
 
 farms AS (SELECT *, FROM {{ ref('int__farms') }}),
