@@ -19,6 +19,45 @@ Farm To Market captures where local food is sold and might be grown in New York 
 
 This dataset combines the locations of farmers markets and potential farms (community gardens) to highlight availability and potential local suppliers of healthy produce in NYC.
 
+### dbt Model Lineage
+
+The following diagram shows the lineage of sources and models in the Stage 3 dbt project:
+
+```mermaid
+graph LR
+  source_NYC_Farmers_Markets["source.NYC_Farmers_Markets"]
+  source_GreenThumb_Block_Lot["source.GreenThumb_Block-Lot"]
+  source_GreenThumb_Garden_Info["source.GreenThumb_Garden_Info"]
+  source_Borough_Boundaries["source.Borough_Boundaries"]
+
+  stg_boroughs["stg__boroughs"]
+  stg_garden_info["stg__garden_info"]
+  stg_markets["stg__markets"]
+  stg_garden_block_lot["stg__garden_block_lot"]
+
+  int_farms["int__farms"]
+  farms["farms"]
+  farm_to_market["farm_to_market"]
+  markets["markets"]
+
+  %% Source successors
+  source_NYC_Farmers_Markets --> stg_markets
+  source_GreenThumb_Block_Lot --> stg_garden_block_lot
+  source_GreenThumb_Garden_Info --> stg_garden_info
+  source_Borough_Boundaries --> stg_boroughs
+
+  %% Staging model successors
+  stg_boroughs --> int_farms
+  stg_garden_info --> int_farms
+  stg_garden_block_lot --> int_farms
+  stg_markets --> farm_to_market
+  stg_markets --> markets
+
+  %% Intermediate model successors
+  int_farms --> farms
+  int_farms --> farm_to_market
+```
+
 ### Final tables
 
 `markets`
