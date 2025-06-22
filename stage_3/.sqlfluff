@@ -1,6 +1,8 @@
 [sqlfluff]
 templater = dbt
 dialect = duckdb
+exclude_rules = ambiguous.column_count
+max_line_length = 100
 
 [sqlfluff:rules:convention.select_trailing_comma]
 select_clause_trailing_comma = require
